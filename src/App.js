@@ -1,7 +1,10 @@
 import React from 'react';
 import './App.css';
 import styled from 'styled-components'
-import { Filtros } from './Components/Filtros';
+import  Filtros  from './Components/Filtros';
+import ProdutoItem from './Components/Produto';
+import { render } from '@testing-library/react';
+
 
 // ESTILIZAÇÃO COM STYLED COMPONENTS
 
@@ -48,11 +51,13 @@ button{
 `
 
 function App() {
+
+ 
   return (
     <Tela>
-      <FiltroArea>
+      <FiltroCarrinhoArea>
         <Filtros/>
-      </FiltroArea>
+      </FiltroCarrinhoArea>
           <ProdutosArea>
         <ContainerSuperior>
           <p>Quantidade de produtos: </p>
@@ -62,16 +67,24 @@ function App() {
         </ContainerSuperior>
         <ContainerProdutos>
             <Produto>
-              <img src='https://neilpatel.com/wp-content/uploads/2019/07/mini-caixas-de-produtos-em-cima-de-laptop.jpeg'></img>
-              <p>Título</p>
-              <p>Preço</p>
-              <button>Adicionar ao carrinho</button>
+              <ProdutoItem link="https://neilpatel.com/wp-content/uploads/2019/07/mini-caixas-de-produtos-em-cima-de-laptop.jpeg"  título= "Blusa" preco= "29,90"/>
+            
             </Produto>
             <Produto>
-              <img src='https://neilpatel.com/wp-content/uploads/2019/07/mini-caixas-de-produtos-em-cima-de-laptop.jpeg'></img>
-              <p>Título</p>
-              <p>Preço</p>
-              <button>Adicionar ao carrinho</button>
+              <ProdutoItem link="https://neilpatel.com/wp-content/uploads/2019/07/mini-caixas-de-produtos-em-cima-de-laptop.jpeg"  título= "Brinquedo" preco= "129,90"/>
+            
+            </Produto>
+            <Produto>
+              <ProdutoItem link="https://neilpatel.com/wp-content/uploads/2019/07/mini-caixas-de-produtos-em-cima-de-laptop.jpeg"  título= "Lanterna" preco= "19,90"/>
+            
+            </Produto>
+            <Produto>
+              <ProdutoItem link="https://neilpatel.com/wp-content/uploads/2019/07/mini-caixas-de-produtos-em-cima-de-laptop.jpeg"  título= "Nave Espacial" preco= "298.007,90"/>
+            
+            </Produto>
+            <Produto>
+              <ProdutoItem link="https://neilpatel.com/wp-content/uploads/2019/07/mini-caixas-de-produtos-em-cima-de-laptop.jpeg"  título= "Capacete" preco= "99,90"/>
+            
             </Produto>
             
         </ContainerProdutos>

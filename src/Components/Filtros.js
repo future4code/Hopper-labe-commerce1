@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Filtros(){
+function Filtros(){
     return <div>
     <h3> Filtros</h3>
     <input placeholder="Preço Mínimo"/>
@@ -8,3 +8,4 @@ export function Filtros(){
     <input placeholder="Nome do produto"/>
   </div>
 }
+export default Filtros;
